@@ -19,6 +19,8 @@
     <style>
         body {
             background-color: whitesmoke;
+            position: relative;  
+            overflow-x: hidden;
         }
 
         .carousel-inner {
@@ -105,14 +107,13 @@
         .retangulo {
             width: 100%;
             margin-left: 90px;
-        
-
         }
 
         .tudoall{
             width: 180px;
             margin-left: 1250px;  
             margin-top:-55px; 
+            
         }
 
         .w3-top{
@@ -171,7 +172,7 @@
 
 
 
-    <div class="retangulo"id="sobre">
+    <div class="retangulo" id="sobre">
         <img src="../img/Nosso objetivo de movimentos do CAIXA TUDOTELECOM possui duas funções específicas registrar todas as retiradas dos caixa(reembolso), as entradas e reposição (saldo). O sistema trabalha com dois co.png"><br>
     </div>
     <br><br><br><br><br>
@@ -205,7 +206,7 @@
     <div class="bnt">
         <div class="container">
             <h1 style="color:black; font-family: Minion Pro;" id="fale">𝗖𝗼𝗺𝗼 𝗽𝗼𝘀𝘀𝗼 𝗮𝗷𝘂𝗱𝗮𝗿?</h1>
-            <a href="https://wa.me/qr/YMILYFZ2X7JOP1" class="botao-contato">ENTRE EM CONTATO E FALE CONOSCO</a>
+            <a href="https://wa.me/5585992556994" class="botao-contato">ENTRE EM CONTATO E FALE CONOSCO</a>
         </div>
     </div><br><br><br>
 

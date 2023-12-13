@@ -81,7 +81,7 @@
 <body class="fund"><br>
     <div class="container mx-auto">
         <img src="../img/logo2.png" class="loo">
-        <h3 class="d-flex justify-content-center mb-3">Movimentaçoes ao mês</h3><br>
+        <h3 class="d-flex justify-content-center mb-3">Movimentaçoes</h3><br>
 
         <div class="box-search">
     <button class="mt-4 btn btn-outline-warning" id="mostrarDados">Mostrar Dados</button>
@@ -137,10 +137,10 @@
 
                             
     if ($valor_final > $valor_inicial) {
-        echo "Seu estado é de Lucro";
+        echo "Seu estado é de LUCRO";
         $somaLucro += $resultado; // Adiciona à soma se for lucro
     } else {
-        echo "Seu estado é de Despesa";
+        echo "Seu estado é de DESPESA";
         $somaDespesa += $resultado; // Adiciona à soma se for despesa
     }
     echo "</td>
@@ -148,13 +148,13 @@
 }
 
 if ($somaLucro > $somaDespesa) {
-    echo "<script>alert('Parabéns! O mês foi muito bom para você. Sua soma total de Lucro é R$: $somaLucro');
+    echo "<script>alert('Parabéns! O periodo foi muito bom para você. Sua soma total de LUCRO é R$: $somaLucro');
           </script>";
 } elseif ($somaDespesa > $somaLucro) {
-    echo "<script>alert('Cuidado! Suas despesas foram maiores este mês. Sua soma total de Despesa é R$: $somaDespesa');
+    echo "<script>alert('Cuidado! Suas despesas foram maiores este mês. Sua soma total de DESPESAS é R$: $somaDespesa');
           </script>";
 } else if($somaDespesa = $somaLucro){
-    echo "<script>alert('O mês está equilibrado, sem Lucro nem Despesa.');
+    echo "<script>alert('O periodo está equilibrado, sem Lucro nem Despesa.');
           </script>";
 }
                 } else {
@@ -167,11 +167,11 @@ if ($somaLucro > $somaDespesa) {
         <button class='mt-4 btn btn-outline-success' onclick='mostrarAlertaLucro()'>Mostrar Soma de Lucro</button>
         <script>
             function mostrarAlertaDespesa() {
-                alert('A soma total das despesas é R$: $somaDespesa');
+                alert('A soma total das DESPESAS é R$: $somaDespesa');
             }
 
             function mostrarAlertaLucro() {
-                alert('A soma total do lucro é R$: $somaLucro');
+                alert('A soma total doS LUCROS é R$: $somaLucro');
             }
         </script>
         </div>";    

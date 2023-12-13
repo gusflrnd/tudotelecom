@@ -135,15 +135,15 @@ body {
         <label for="motivo">Motivo:</label>
         <select id="motivo" name="motivo" required>
           <option>Gasolina</option>
-          <option>Seu Tarquilio</option>
-          <option>Material de campo(suporte)</option>
+          <option>Tarquilio</option>
+          <option>Materialdecamposuporte</option>
           <option>Almoco</option>
           <option>Propaganda</option>
           <option>Agua</option>
-          <option>Material de escritorio</option>
-          <option>Manuntenção de veiculos</option>
+          <option>Escritorio</option>
+          <option>Veiculos</option>
           <option>Limpeza</option>
-          <option>Telefone(crédito)</option>
+          <option>Telefone</option>
           <option>Outro</option>
         </select>
       </div>

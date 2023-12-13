@@ -100,7 +100,6 @@
         .w3-top{
             background-color: #FFD700;
             color: black;
-          
         }
         
         .body{
