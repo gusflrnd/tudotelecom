@@ -69,7 +69,6 @@
         h3{
             color:white;
         }
-
     </style>
 </head>
 

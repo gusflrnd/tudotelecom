@@ -119,12 +119,13 @@
       width: 25px;
       height: 25px;
       margin-top: 9px;
-      margin-left: 10px;
+      margin-left: 5px;
     }
+
     /* Estilo para o texto a ser mostrado/oculto */
     .hidden-text {
       display: none;
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     .w3-top{
@@ -183,9 +184,8 @@
                 justify-content: center;
                 background-position: center;
                 width: 100%;
-            }
-     
-
+            }     
+      
     </style>
 
 </head>
@@ -198,44 +198,34 @@
     <div class="w3-top">
         <div class="w3-bar w3-padding w3-card w3-left">
             <a href="../principal/index.php" class="w3-bar-item w3-button w3-padding-large">VOLTAR</a>
-           
-<button id="eyeButton" class="eye-button">
-  <img id="eyeIcon" class="eye-icon" src="../img/olho.png" alt="Mostrar texto">
-</button>
-
-<!-- Botão Olho -->
-<a class="w3-bar-item w3-button w3-padding-large">𝑀𝐸𝑈 𝑆𝐴𝐿𝐷𝑂 𝐷𝐼𝑆𝑃𝑂𝑁𝐼́𝑉𝐸𝐿:</a>
-
-<p id="textToToggle" class="hidden-text" type="submit"name="submit">
-
-<?php        
-    echo "R$ $valorFormatado"; 
-?> 
-
-</p>
-           
+            <button id="eyeButton" class="eye-button">
+                <img id="eyeIcon" class="eye-icon" src="../img/olho.png" alt="Mostrar texto">
+            </button>
+            <a class="w3-bar-item w3-button w3-padding-large">𝑀𝐸𝑈 𝑆𝐴𝐿𝐷𝑂 𝐷𝐼𝑆𝑃𝑂𝑁𝐼́𝑉𝐸𝐿:</a>
+    
+            <p id="textToToggle" class="hidden-text" type="submit" name="submit">
+                <?php echo "R$ $valorFormatado"; ?>
+            </p>
         </div>
     </div>
 
-<div class="container1">
-        <h2>TOTAL</h2><br>
-           
-    <form method="post" action="">
-    <button id="startButton" class="button"  name="submit"  type="submit">Calcular Saldo</button>
+    <div class="container1" style="color:black">
+        <h2>TOTAL</h2>
+        <form method="post" action="">
+            <button id="startButton" class="button"  name="submit"  type="submit">Calcular Saldo</button>
+        </form><br>
 
-  
-    </form>
- 
-        <h2>Saldo</h2>
+        <h2>SALDO</h2>
+
     
-        <form action="../caixa/inserir_total2.php" method="POST">
+        <form action="../caixa/inserir_total2.php" method="POST" style="color:black">
 
       <!-- Dentro do seu formulário -->
       <label for="valor_inicial">Valor Inicial:</label>
-      <input type="text" id="valor_inicial" name="valor_inicial" value="<?php echo isset($valorInicial) ? $valorInicial : ''; ?>"><br>
+      <input type="text" id="valor_inicial" name="valor_inicial" value="<?php echo isset($valorInicial) ? $valorInicial : ''; ?>"><br><br>
 
         <label for="valor_final">Valor Final:</label>
-        <input type="text" id="valor_final" name="valor_final"><br>
+        <input type="text" id="valor_final" name="valor_final"><br><br>
         
         <label for="data">Data:</label>
         <input type="date" id="data" name="data" required><br><br>
@@ -247,9 +237,6 @@
         </form>
 
 <br><br><br><br><br><br>
-
-   
-
 
         <div id="spinnerContainer" class="hidden">
         <div class="spinner-container">

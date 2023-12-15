@@ -143,7 +143,6 @@ $resultadoAgua = $conn->query($sqlAgua);
 
                 <?php
           
-
                 if (isset($_SESSION)) {
                     include('../db/conexao.php');
                     $sql = "SELECT * from saque";
@@ -192,7 +191,6 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
 </table>   
-<button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Gasolina</button><br>
 <br><br><br>
 
 <h2>Material De Campo (Suporte)</h2>
@@ -217,8 +215,7 @@ $resultadoAgua = $conn->query($sqlAgua);
                             }
                     ?>
     </tbody>
-</table>   
-<button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Material de Campo</button><br>
+</table> 
 <br><br><br>
 
 
@@ -246,7 +243,6 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
             </table>
-            <button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Almoço</button><br>
             <br><br><br>
 
 <h2>Propaganda</h2>
@@ -273,11 +269,7 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
             </table>
-            
-            <button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Propaganda</button><br><br><br>
-
-
-            
+            <br><br><br>
 <h2>Agua</h2>
             <table class="container">
                 <thead>
@@ -302,10 +294,7 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
             </table>
-            
-            <button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Agua</button><br><br><br>
-
-  
+            <br><br><br>
 <h2>Escritorio</h2>
             <table class="container">
                 <thead>
@@ -330,10 +319,9 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
             </table>
-            <button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Escritorio</button><br>
+          
             <br><br><br>
         
-
             <h2>Veiculos</h2>
             <table class="container">
                 <thead>
@@ -358,7 +346,6 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
             </table>
-            <button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Veiculos</button><br>
             <br><br><br>
 
             <h2>Limpeza</h2>
@@ -385,7 +372,7 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
             </table>
-            <button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Limpeza</button><br>
+           
             <br><br><br>
 
             <h2>Telefone</h2>
@@ -412,7 +399,6 @@ $resultadoAgua = $conn->query($sqlAgua);
                     ?>
     </tbody>
             </table>
-            <button class="mt-4 btn btn-outline-success" onclick="exibirMediaAlmocoNoConsole()">Calcular Média Telefone</button><br>
             <br>
             
             <button class="mt-4 btn btn-outline-primary"><a href="../principal/index.php" class="text-decoration-none">Voltar</a></button>

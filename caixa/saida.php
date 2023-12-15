@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>TUDOTELECOM|inicio</title>
+    <title>TUDOTELECOM|saida</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,6 +87,11 @@ body {
             width: 100%;
         }
      
+        .tudoall{
+            width: 180px;
+            margin-left: 1250px;  
+            margin-top:-55px;
+        }
     </style>
 
 </head>
@@ -98,18 +103,17 @@ body {
     <div class="w3-top">
         <div class="w3-bar w3-padding w3-card w3-left">
             <a href="../principal/index.php" class="w3-bar-item w3-button w3-padding-large">VOLTAR</a>
-            <a href="../caixa/total.php" class="w3-bar-item w3-button w3-padding-large">TOTAL:R$_____</a>
-            <a class="w3-padding-large w3-hide-small w3-hover-black w3-right w3-button"><b>𝑪𝑨𝑰𝑿𝑨 𝑻𝑼𝑫𝑶𝑻𝑬𝑳𝑬𝑪𝑶𝑴
+            <a href="../caixa/total.php" class="w3-bar-item w3-button w3-padding-large">TOTAL</a>
          </a>
-
+         <img src="../img/logoprinc.png" class="tudoall"></a> 
     </div>
     </div><br><br><br><br><br><br><br><br>
 
 
-    <form action="../caixa/inserir_saida.php" method="POST" id="loin_form">
+    <form action="../caixa/inserir_saida.php" method="POST" id="loin_form"><br><br><br><br><br><br><br><br><br><br><br>
    
-  <div class="container">
-    <h2>Saque</h2>
+  <div class="container" style="color:black">
+    <h2 style="text-align: center; font-family: Georgia, serif">SAQUE</h2>
     <form action="#" method="POST">
       <div class="form-group">
         <label for="valor">Valor:</label>
@@ -117,12 +121,12 @@ body {
       </div>
 
       <div class="form-group">
-        <label for="depositante">Depositante:</label>
+        <label for="depositante">Quem deu?</label>
         <input type="text" id="depositante" name="depositante" required><br>
       </div>
 
       <div class="form-group">
-        <label for="depositario">Destinatario:</label>
+        <label for="depositario">Quem recebeu?</label>
         <select id="depositario" name="depositario" required>
           <option>Analine</option>
           <option>Mayara</option>

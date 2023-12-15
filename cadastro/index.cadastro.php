@@ -103,8 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 #social_midia h1{
     font-size: 40px;
     position: relative;
-
-
 }
 
 #social_midia h1::before{
@@ -119,6 +117,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 #social_midia img{
     width:75px;
+}
+
+#social_midia img:hover{
+    transform: scale(1.2);
 }
 
     #mode_icon {
@@ -276,18 +278,12 @@ color: var(--color-yellow-gradient);
                             </div>
                         </label>
                     </div>
-
-
-                    <div id="forgot_senha">
-                        <a href="#">Esqueceu sua senha?</a>
-                    </div>
                 </div>
 
                 <button type="submit" name="submit" id="login_button">ᴄᴀᴅᴀsᴛʀᴀʀ</button>
 
         </main>
         </form>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>

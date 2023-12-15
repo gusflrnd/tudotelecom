@@ -112,8 +112,7 @@
         .tudoall{
             width: 180px;
             margin-left: 1250px;  
-            margin-top:-55px; 
-            
+            margin-top:-55px;
         }
 
         .w3-top{
@@ -130,7 +129,6 @@
         <div class="w3-bar w3-padding w3-card w3-left">
             <a href="../login/index.login.php" class="w3-bar-item w3-button w3-padding-large">LOGAR</a>
             <a href="../cadastro/index.cadastro.php" class="w3-bar-item w3-button w3-padding-large">CADASTRO</a>
-            <a href="#sobre" class="w3-bar-item w3-button w3-padding-large">SOBRE</a>
             <a href="#fale" class="w3-bar-item w3-button w3-padding-large">FALE CONOSCO</a>
 
             <div class="w3-dropdown-hover w3-hide-small">
@@ -140,7 +138,8 @@
                 </div>      
             </div>
 
-        <img src="../img/Tudo-Telecom-Logo.png" class="tudoall"></a>    
+        <img src="../img/logoprinc.png" class="tudoall"></a>    
+        
         </div>
     </div>
     <br><br>
@@ -205,26 +204,26 @@
     <br><br><br><br><br><br>
     <div class="bnt">
         <div class="container">
-            <h1 style="color:black; font-family: Minion Pro;" id="fale">𝗖𝗼𝗺𝗼 𝗽𝗼𝘀𝘀𝗼 𝗮𝗷𝘂𝗱𝗮𝗿?</h1>
+            <h1 style="color:black; font-family: Georgia, serif;" id="fale">𝗖𝗼𝗺𝗼 𝗽𝗼𝘀𝘀𝗼 𝗮𝗷𝘂𝗱𝗮𝗿?</h1>
             <a href="https://wa.me/5585992556994" class="botao-contato">ENTRE EM CONTATO E FALE CONOSCO</a>
         </div>
     </div><br><br><br>
 
     <footer>
-        <div class="w3-row-padding">
+        <div class="w3-row-padding" style="font-family: Georgia, serif">
             <div class="logo">
                 <img src="../img/Tudo-Telecom-Logo.png">
             </div>
 
             <div class="w3-third">
-                <h2>Por:</h2>
+                <h2>por</h2>
                 <p> Alice Florindo <br>Paulo Henrrique
                     <br>Marcos Kauan
                 </p>
             </div>
 
             <div class="w3-third">
-                <h2 id="contato";>Codificação</h2>
+                <h2 id="contato";>codificação</h2>
                 <ul class="w3-ul w3-hoverable">
                     <li class="w3-padding-16">
                         <span class="w3-large">Front-end</span><br>
@@ -242,7 +241,7 @@
             </div>
 
             <div class="w3-third">
-                <h2>Contato</h2>
+                <h2>contatos</h2>
                 <p>
                     (85)99255-6994 <br> (85)99696-1466
                     <br> (85)99942-9781
@@ -254,7 +253,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+
+       
+</script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,6 +95,10 @@ session_start();
 
 #social_midia img{
     width:75px;
+}
+
+#social_midia img:hover{
+    transform: scale(1.2);
 }
 
     #mode_icon {
@@ -200,13 +205,14 @@ color: var(--color-yellow-gradient);
         }
 
         .body{
-            background-image: url('../img/cadlog2.png');
+            background-image: url('../img/fundo_resized.png');
             display: flex;
             height: 775px;
             justify-content: center;
             background-position: center;
             width: 100%;
         }    
+        
     </style>
         </style>
 </head>

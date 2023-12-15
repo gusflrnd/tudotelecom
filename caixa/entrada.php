@@ -109,6 +109,12 @@
             background-position: center;
             width: 100%;
         }
+
+        .tudoall{
+            width: 180px;
+            margin-left: 1250px;  
+            margin-top:-55px;
+        }
          
     </style>
 
@@ -122,17 +128,19 @@
     <div class="w3-top">
         <div class="w3-bar w3-padding w3-card w3-left">
             <a href="../principal/index.php" class="w3-bar-item w3-button w3-padding-large">VOLTAR</a>
-            <a href="../caixa/total.php" class="w3-bar-item w3-button w3-padding-large">TOTAL:R$_____</a>
-            <a class="w3-padding-large w3-hide-small w3-hover-black w3-right w3-button"><b>𝑪𝑨𝑰𝑿𝑨 𝑻𝑼𝑫𝑶𝑻𝑬𝑳𝑬𝑪𝑶𝑴
-         </a>
+            <a href="../caixa/total.php" class="w3-bar-item w3-button w3-padding-large">TOTAL</a>
+            <img src="../img/logoprinc.png" class="tudoall"></a> 
         </div>
+
     </div><br><br><br>
 
+   
 
-    <form action="../caixa/inserir_entrada.php" method="POST" id="loin_form">
+    <form action="../caixa/inserir_entrada.php" method="POST" id="loin_form"><br><br><br><br>
 
-<div class="container">
-        <h2>Deposito</h2>
+<div class="container" style="color:black">
+        <h2 style="text-align: center; font-family: Georgia, serif">DEPOSITO</h2>
+        
         <form action="#" method="POST">
         <div class="form-group">
                 <label for="valor">Valor:</label>
@@ -140,12 +148,12 @@
         </div>
 
             <div class="form-group">
-                <label for="valor">Depositante:</label>
+                <label for="valor">Quem deu?</label>
                 <input type="text" id="valor" name="depositante" required><br>
             </div>
             
             <div class="form-group">
-                <label for="valor">Depositario:</label>
+                <label for="valor">Quem recebeu?</label>
                 <select id="motivo1" name="depositario" required>
                         <option>Analine</option>
                         <option>Mayara</option>

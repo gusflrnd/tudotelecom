@@ -46,7 +46,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>TUDOTELECOM | loin</title>
+    <title>TUDOTELECOM | login</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -119,7 +119,6 @@
 #social_midia h1{
     font-size: 40px;
     position: relative;
-
 
 }
 
@@ -228,7 +227,13 @@ color: var(--color-yellow-gradient);
             justify-content: center;
             background-position: center;
             width: 100%;
+            height: 100vh; /* 100% of the viewport height */
+            width: 100%;
+            position: relative;
+            overflow-x: hidden;
         }           
+
+      
 </style>
 
 <body class="body">
@@ -252,9 +257,6 @@ color: var(--color-yellow-gradient);
                 <img src="../img/WhatsApp_Image_2023-10-07_at_09.34.18-removebg-preview.png"alt="">
             </div>
 
-
-
-
         <div id="inputs">
         <div class="input-box">
         <label for="email">
@@ -275,12 +277,6 @@ color: var(--color-yellow-gradient);
 </div>
 </label><br><br>
         
-        <div id="forgot_senha">
-            <a href="#">
-                Esqueceu sua senha?
-</a>    
-
-</div>
 </div>
 
 <button type="submit" href="../principal/index" id="login_button" name="submit">

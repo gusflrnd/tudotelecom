@@ -29,43 +29,45 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
  
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>TUDOTELECOM | inicio</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css"> <!-- Create a separate CSS file for your styles -->
     <link rel="apple-touch-icon" sizes="180x180" href="../img/cara-removebg-preview.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/cara-removebg-preview.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/cara-removebg-preview.png">
-       
+
     <style>
-        .body{
+        /* Add your custom styles here */
+        body {
             background-color: whitesmoke;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
 
-          .w3-top{
+        .w3-top {
             background-color: #FFD700;
-            color:black;
-            height:75px;
+            color: black;
+            height: 75px;
         }
-        .fundo{
-            height: 795px;
+
+        .fundo {
+            height: 100vh; /* 100% of the viewport height */
             width: 100%;
-            position: relative;  
+            position: relative;
             overflow-x: hidden;
         }
 
-          .config{
+        .config {
             z-index: 5;
         }
-
-       
+        
     </style>
 
 </head>
@@ -113,6 +115,12 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
         </div>
     </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofP+Neo4v8x0txcAL5Z+DpL/F5Z9xgEIl6" crossorigin="anonymous"></script>
 </body>
+
 </html>
