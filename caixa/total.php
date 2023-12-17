@@ -1,31 +1,34 @@
 <?php
   session_start(); // Inicia a sessão
-  
+
+  $valorFormatado = 0; //impede a quebra
   if (isset($_POST['submit'])) { // Verifica se o botão foi clicado
       try {
-          // Conexão com o banco de dados (substitua pelas suas configurações)
-          $db = new PDO('mysql:host=localhost;dbname=caixa_td_telecom', 'root', '');
-  
-          // Calcula o valor total dos depósitos
-          $stmtDepositos = $db->query('SELECT COALESCE(SUM(valor), 0) FROM tb_deposito');
-          $totalDepositos = $stmtDepositos->fetchColumn();
-  
-          // Calcula o valor total dos saques
-          $stmtSaques = $db->query('SELECT COALESCE(SUM(valor), 0) FROM saque');
-          $totalSaques = $stmtSaques->fetchColumn();
-  
-          // Obtém o valor inicial do saldo
-         $stmtSaldo = $db->query('SELECT valor_final FROM saldo ORDER BY data DESC LIMIT 1');
-         $valorFinal = $stmtSaldo->fetchColumn();
+        // Conexão com o banco de dados (substitua pelas suas configurações)
+        $db = new PDO('mysql:host=localhost;dbname=caixa_td_telecom', 'root', '');
+        
+        $dataCorte = date('Y-m-d');
+         // Calcula o saldo inicial (antes da data de corte)
+        $stmtSaldoInicialDepSQL = $db->query("SELECT COALESCE(SUM(valor), 0) FROM tb_deposito WHERE data < '$dataCorte'");
+        $stmtSaldoInicialDepositos = $stmtSaldoInicialDepSQL->fetchColumn();
+        $stmtSaldoInicialSaqSQL = $db->query("SELECT COALESCE(SUM(valor), 0) FROM saque WHERE STR_TO_DATE(CONCAT(ano, '-', LPAD(mes, 2, '0'), '-', LPAD(dia, 2, '0')), '%Y-%m-%d') < '$dataCorte'");
+        $stmtSaldoInicialSaques = $stmtSaldoInicialSaqSQL->fetchColumn();
+        $valorInicial = $stmtSaldoInicialDepositos - $stmtSaldoInicialSaques;
 
-         // Configura o valor inicial igual ao valor final repassado pelo usuário
-         $valorInicial = $valorFinal;
+        // Calcula o saldo final (até a data de corte, incluindo o dia)
+        $stmtSaldoFinalDepSQL = $db->query("SELECT COALESCE(SUM(valor), 0) FROM tb_deposito WHERE data <= '$dataCorte'");
+        $stmtSaldoFinalDepositos = $stmtSaldoFinalDepSQL->fetchColumn();
+        $stmtSaldoFinalSaquesSQL = $db->query("SELECT COALESCE(SUM(valor), 0) FROM saque WHERE STR_TO_DATE(CONCAT(ano, '-', LPAD(mes, 2, '0'), '-', LPAD(dia, 2, '0')), '%Y-%m-%d') <= '$dataCorte'");
+        $stmtSaldoFinalSaques = $stmtSaldoFinalSaquesSQL->fetchColumn();
+        $valorFinal = $stmtSaldoFinalDepositos - $stmtSaldoFinalSaques;
 
-         // Calcula o valor final
-         $resultado = $valorFinal + $totalDepositos - $totalSaques;
+        // Formata o saldo inicial com dezenas, decimais e centenas
+        $valorFormatadoInicial = number_format($valorInicial, 2, ',', '.');
 
-         // Formata o valor final com dezenas, decimais e centenas
-         $valorFormatado = number_format($resultado, 2, ',', '.');
+        // Formata o saldo final com dezenas, decimais e centenas
+        $valorFormatado = number_format($valorFinal, 2, ',', '.');
+
+        $resultado = $valorFormatado;
 
       } catch (PDOException $e) {
           echo "Erro: " . $e->getMessage();
@@ -225,12 +228,12 @@
       <input type="text" id="valor_inicial" name="valor_inicial" value="<?php echo isset($valorInicial) ? $valorInicial : ''; ?>"><br><br>
 
         <label for="valor_final">Valor Final:</label>
-        <input type="text" id="valor_final" name="valor_final"><br><br>
+        <input type="text" id="valor_final" name="valor_final" value="<?php echo isset($valorFinal) ? $valorFinal : ''; ?>"><br><br>
         
         <label for="data">Data:</label>
-        <input type="date" id="data" name="data" required><br><br>
+        <input type="date" id="data" name="data" required readonly><br><br>
 
-      <button type="submit" class="button" name="submit" onclick="calcularValorFinalEData()">Calcular Valores</button>
+        <button type="submit" class="button" name="submit" onclick="calcularValorFinalEData()">Calcular Valores</button> 
         
     </div>
     </div>

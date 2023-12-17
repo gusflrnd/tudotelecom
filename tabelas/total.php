@@ -116,7 +116,7 @@
                         while ($linha = mysqli_fetch_assoc($dados)) {
                             $valor_inicial = $linha['valor_inicial'];
                             $valor_final = $linha['valor_final'];
-                            $resultado = abs($valor_final - $valor_inicial);
+                            $resultado = $valor_final - $valor_inicial;
                     
                             
                             echo "<tr>
@@ -136,16 +136,18 @@
                             <td>";
 
                             
-    if ($valor_final > $valor_inicial) {
-        echo "Seu estado é de LUCRO";
-        $somaLucro += $resultado; // Adiciona à soma se for lucro
-    } else {
-        echo "Seu estado é de DESPESA";
-        $somaDespesa += $resultado; // Adiciona à soma se for despesa
-    }
-    echo "</td>
-        </tr>";
-}
+                            if ($resultado > 0) {
+                                echo "Seu estado é de LUCRO";
+                                $somaLucro += $resultado; // Adiciona à soma se for lucro
+                            } else if ($resultado < 0){
+                                echo "Seu estado é de DESPESA";
+                                $somaDespesa += abs($resultado); // Adiciona à soma se for despesa
+                            } else {
+                                echo "Resultado zero";
+                            }
+                            echo "</td>
+                                </tr>";
+                            }
 
 if ($somaLucro > $somaDespesa) {
     echo "<script>alert('Parabéns! O periodo foi muito bom para você. Sua soma total de LUCRO é R$: $somaLucro');
